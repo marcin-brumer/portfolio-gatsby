@@ -1,9 +1,9 @@
 import React from "react"
 
-const IndexPage = () => (
+const ContactPage = () => (
   <div>
     <h1>Hi people</h1>
   </div>
 )
 
-export default IndexPage
+export default ContactPage
