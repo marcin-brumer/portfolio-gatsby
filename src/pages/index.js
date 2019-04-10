@@ -1,9 +1,10 @@
-import React from "react"
+import React from "react";
+import Layout from "../layout/Layout";
 
 const IndexPage = () => (
-  <div>
+  <Layout>
     <h1>Hi people</h1>
-  </div>
-)
+  </Layout>
+);
 
-export default IndexPage
+export default IndexPage;
