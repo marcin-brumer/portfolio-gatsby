@@ -6,6 +6,10 @@ const StyledHeading = styled.h1`
   margin: 0;
   font-weight: 400;
 
+  @media ${({ theme }) => theme.media.tablet} {
+    line-height: 1;
+  }
+
   @media ${({ theme }) => theme.media.mobileL} {
     font-size: 5rem;
   }
