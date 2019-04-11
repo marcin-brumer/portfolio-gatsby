@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { media } from "../../utils/media";
 
 const StyledHeading = styled.h1`
   font-size: 6rem;
   margin: 0;
   font-weight: 400;
 
-  @media ${media.mobileL} {
+  @media ${({ theme }) => theme.media.mobileL} {
     font-size: 5rem;
   }
 `;
