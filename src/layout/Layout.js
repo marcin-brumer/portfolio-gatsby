@@ -6,7 +6,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: ${({ theme }) => theme.colors.white}
   }
 
   *, *::before, *::after {
