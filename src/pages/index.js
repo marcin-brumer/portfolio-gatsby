@@ -37,7 +37,7 @@ const IndexPage = () => (
   <Layout>
     <StyledWrapper>
       <LargeHeading>Marcin Brumer</LargeHeading>
-      <SmallHeading>Web Developer, Programmer</SmallHeading>
+      <SmallHeading text={["Web Developer", "Programmer"]} typeWriter />
     </StyledWrapper>
   </Layout>
 );
