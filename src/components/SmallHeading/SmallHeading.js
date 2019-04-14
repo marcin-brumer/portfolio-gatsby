@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import ReactTypingEffect from "react-typing-effect";
 
 const StyledHeading = styled.h2`
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem 0;
   padding: 0.2rem 1rem;
   font-size: 2rem;
   font-weight: 400;
@@ -21,8 +22,16 @@ const StyledHeading = styled.h2`
   }
 `;
 
-const SmallHeading = ({ children }) => {
-  return <StyledHeading>{children}</StyledHeading>;
+const SmallHeading = ({ text, typeWriter }) => {
+  if (!typeWriter) {
+    const displayedText = text.join(" ");
+    return <StyledHeading>{displayedText}</StyledHeading>;
+  }
+  return (
+    <StyledHeading>
+      <ReactTypingEffect text={text} eraseDelay={3000} />
+    </StyledHeading>
+  );
 };
 
 export default SmallHeading;
