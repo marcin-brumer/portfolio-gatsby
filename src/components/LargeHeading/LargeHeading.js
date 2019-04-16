@@ -5,6 +5,8 @@ const StyledHeading = styled.h1`
   font-size: 6rem;
   margin: 0;
   font-weight: 400;
+  position: relative;
+  z-index: 1;
 
   @media ${({ theme }) => theme.media.tablet} {
     line-height: 1;

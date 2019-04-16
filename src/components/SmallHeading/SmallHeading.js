@@ -8,6 +8,7 @@ const StyledHeading = styled.h2`
   font-size: 2rem;
   font-weight: 400;
   position: relative;
+  z-index: 1;
 
   ::after {
     content: "";
