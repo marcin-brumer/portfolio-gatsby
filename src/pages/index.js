@@ -3,7 +3,13 @@ import styled from "styled-components";
 import Layout from "../layout/Layout";
 import LargeHeading from "../components/LargeHeading/LargeHeading";
 import SmallHeading from "../components/SmallHeading/SmallHeading";
+import SocialButton from "../components/UI/SocialButton/SocialButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import background from "../img/background.jpg";
+
+library.add(fab);
 
 const StyledWrapper = styled.main`
   background: url(${background}) no-repeat center center;
@@ -11,17 +17,14 @@ const StyledWrapper = styled.main`
   position: relative;
   height: 100vh;
   padding: 25vh 3rem 3rem 3rem;
-  z-index: -1;
-  :after {
+  ::after {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     min-height: 100%;
-    z-index: -1;
-    background: ${({ theme }) => theme.colors.primary};
-    opacity: 0.8;
+    background: rgba(68, 68, 68, 0.8);
   }
 
   @media ${({ theme }) => theme.media.tablet} {
@@ -33,11 +36,32 @@ const StyledWrapper = styled.main`
   }
 `;
 
+const SocialSection = styled.section`
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+
+  @media ${({ theme }) => theme.media.tablet} {
+    margin: 0 auto;
+  }
+`;
+
 const IndexPage = () => (
   <Layout>
     <StyledWrapper>
       <LargeHeading>Marcin Brumer</LargeHeading>
       <SmallHeading text={["Web Developer", "Programmer"]} typeWriter />
+      <SocialSection>
+        <SocialButton link="https://www.linkedin.com/in/marcin-brumer-21469b175/">
+          <FontAwesomeIcon icon={["fab", "linkedin"]} />
+        </SocialButton>
+        <SocialButton link="https://github.com/marcin-brumer">
+          <FontAwesomeIcon icon={["fab", "github"]} />
+        </SocialButton>
+        <SocialButton link="https://codepen.io/Brumek/">
+          <FontAwesomeIcon icon={["fab", "codepen"]} />
+        </SocialButton>
+      </SocialSection>
     </StyledWrapper>
   </Layout>
 );
