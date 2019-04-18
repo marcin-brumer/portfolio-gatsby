@@ -11,7 +11,7 @@ const StyledButton = styled.a`
   box-shadow: 0 5px 15px -5px #00000070;
   overflow: hidden;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
