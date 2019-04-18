@@ -5,4 +5,6 @@ export const media = {
   laptop: `(max-width: 1200px)`,
   laptopL: `(max-width: 1500px)`,
   desktop: `(min-width: 1501px)`,
+  landscapeL: "(max-height: 600px)",
+  landscapeS: "(max-height: 320px)",
 };
