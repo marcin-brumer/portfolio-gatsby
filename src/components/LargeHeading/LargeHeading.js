@@ -15,6 +15,10 @@ const StyledHeading = styled.h1`
   @media ${({ theme }) => theme.media.mobileL} {
     font-size: 5rem;
   }
+
+  @media ${({ theme }) => theme.media.mobileS} {
+    font-size: 3rem;
+  }
 `;
 
 const StyledSpan = styled.span`

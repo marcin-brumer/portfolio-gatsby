@@ -21,6 +21,10 @@ const StyledHeading = styled.h2`
     opacity: 0.5;
     z-index: -1;
   }
+
+  @media ${({ theme }) => theme.media.mobileS} {
+    font-size: 1rem;
+  }
 `;
 
 const SmallHeading = ({ text, typeWriter }) => {

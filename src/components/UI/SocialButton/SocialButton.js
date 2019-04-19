@@ -6,7 +6,6 @@ const StyledButton = styled.a`
   width: 60px;
   height: 60px;
   color: ${({ theme }) => theme.colors.white};
-  margin-right: 20px;
   border-radius: 30%;
   box-shadow: 0 5px 15px -5px #00000070;
   overflow: hidden;
