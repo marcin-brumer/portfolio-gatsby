@@ -12,6 +12,25 @@ const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.white};
   text-decoration: none;
   transition: all 0.5s ease-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    transition: transform 0.5s ease;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: ${({ theme }) => theme.colors.secondary};
+    transform: scaleX(0);
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.secondary};
+    &::before {
+      transform: scaleX(1);
+    }
+  }
 `;
 
 const NavigationLink = ({ children, destination }) => (
