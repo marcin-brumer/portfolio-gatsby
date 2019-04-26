@@ -2,12 +2,27 @@ import React from "react";
 import styled from "styled-components";
 import portrait from "../../../../img/portrait.jpg";
 import smallPortrait from "../../../../img/portrait_small.jpg";
+import posed from "react-pose";
 
-const StyledBranding = styled.div`
+const PosedBranding = posed.div({
+  visible: {
+    y: 0,
+    x: 0,
+    transition: {
+      default: { duration: 500 },
+    },
+  },
+  hidden: {
+    y: "-100%",
+    x: "-100%",
+    transition: {
+      default: { duration: 500 },
+    },
+  },
+});
+
+const StyledBranding = styled(PosedBranding)`
   background: ${({ theme }) => theme.colors.primary};
-  transform: ${({ menuOpen }) =>
-    menuOpen ? "translate3d(0, 0, 0)" : "translate3d(0, 100%, 0)"};
-  transition: all 0.5s ease-out;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -21,8 +36,6 @@ const StyledBranding = styled.div`
     float: none;
     width: 100%;
     height: 25vh;
-    transform: ${({ menuOpen }) =>
-      menuOpen ? "translate3d(0, 0, 0)" : "translate3d(100%, 0, 0)"};
   }
 
   @media ${({ theme }) => theme.media.landscapeL} {
@@ -45,7 +58,7 @@ const Portrait = styled.div`
 `;
 
 const MenuBranding = ({ menuOpen }) => (
-  <StyledBranding menuOpen={menuOpen}>
+  <StyledBranding pose={menuOpen ? "visible" : "hidden"}>
     <Portrait />
   </StyledBranding>
 );
