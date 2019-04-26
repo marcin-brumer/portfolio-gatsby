@@ -8,6 +8,8 @@ const StyledMenu = styled.nav`
   top: 0;
   width: 100%;
   opacity: 0.9;
+  visibility: ${({ menuOpen }) => (menuOpen ? "visible" : "hidden")};
+  transition: visibility 0.5s linear;
 `;
 
 const Menu = ({ menuOpen }) => (
