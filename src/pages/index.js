@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../layout/Layout";
+import Header from "../components/Header/Header";
 import LargeHeading from "../components/LargeHeading/LargeHeading";
 import SmallHeading from "../components/SmallHeading/SmallHeading";
 import SocialButton from "../components/UI/SocialButton/SocialButton";
@@ -11,7 +12,7 @@ import background from "../img/background.jpg";
 
 library.add(fab);
 
-const StyledWrapper = styled.main`
+const StyledMain = styled.main`
   background: url(${background}) no-repeat center center;
   background-size: cover;
   position: relative;
@@ -44,11 +45,18 @@ const SocialSection = styled.section`
   @media ${({ theme }) => theme.media.tablet} {
     margin: 0 auto;
   }
+
+  @media ${({ theme }) => theme.media.mobileS} {
+    width: 60px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
 `;
 
 const IndexPage = () => (
   <Layout>
-    <StyledWrapper>
+    <Header />
+    <StyledMain>
       <LargeHeading>Marcin Brumer</LargeHeading>
       <SmallHeading text={["Web Developer", "Programmer"]} typeWriter />
       <SocialSection>
@@ -62,7 +70,7 @@ const IndexPage = () => (
           <FontAwesomeIcon icon={["fab", "codepen"]} />
         </SocialButton>
       </SocialSection>
-    </StyledWrapper>
+    </StyledMain>
   </Layout>
 );
 
