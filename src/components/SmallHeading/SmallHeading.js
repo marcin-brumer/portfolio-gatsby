@@ -22,6 +22,10 @@ const StyledHeading = styled.h2`
     z-index: -1;
   }
 
+  @media ${({ theme }) => theme.media.tablet} {
+    text-align: center;
+  }
+
   @media ${({ theme }) => theme.media.mobileS} {
     font-size: 1rem;
   }
