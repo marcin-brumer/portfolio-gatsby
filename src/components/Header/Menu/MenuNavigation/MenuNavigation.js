@@ -3,19 +3,19 @@ import styled from "styled-components";
 import NavigationLink from "./NavigationLink/NavigationLink";
 import posed from "react-pose";
 
-const PosedNavigation = posed.div({
+const PosedNavigation = posed.ul({
   visible: {
-    y: 0,
     x: 0,
+    delayChildren: 200,
+    staggerChildren: 50,
     transition: {
-      default: { duration: 500 },
+      default: { duration: 300 },
     },
   },
   hidden: {
-    y: "100%",
     x: "100%",
     transition: {
-      default: { duration: 500 },
+      default: { duration: 300 },
     },
   },
 });
@@ -45,20 +45,25 @@ const StyledNavigation = styled(PosedNavigation)`
   }
 `;
 
+const Item = posed.li({
+  visible: { y: 0, opacity: 1 },
+  hidden: { y: 40, opacity: 0 },
+});
+
 const MenuNavigation = ({ menuOpen }) => (
   <StyledNavigation pose={menuOpen ? "visible" : "hidden"}>
-    <li>
+    <Item>
       <NavigationLink destination="/">Home</NavigationLink>
-    </li>
-    <li>
+    </Item>
+    <Item>
       <NavigationLink destination="/about/">About Me</NavigationLink>
-    </li>
-    <li>
+    </Item>
+    <Item>
       <NavigationLink destination="/work/">My Work</NavigationLink>
-    </li>
-    <li>
+    </Item>
+    <Item>
       <NavigationLink destination="/contact/">Contact</NavigationLink>
-    </li>
+    </Item>
   </StyledNavigation>
 );
 

@@ -5,17 +5,15 @@ import posed from "react-pose";
 
 const PosedBranding = posed.div({
   visible: {
-    y: 0,
     x: 0,
     transition: {
-      default: { duration: 500 },
+      default: { duration: 300 },
     },
   },
   hidden: {
-    y: "-100%",
     x: "-100%",
     transition: {
-      default: { duration: 500 },
+      default: { duration: 300 },
     },
   },
 });
