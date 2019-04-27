@@ -31,6 +31,11 @@ const StyledLink = styled(Link)`
       transform: scaleX(1);
     }
   }
+
+  @media ${({ theme }) => theme.media.landscapeS} {
+    padding: 8px 0;
+    font-size: 24px;
+  }
 `;
 
 const NavigationLink = ({ children, destination }) => (
