@@ -27,10 +27,9 @@ const StyledHeading = styled.h2`
   }
 `;
 
-const SmallHeading = ({ text, typeWriter }) => {
+const SmallHeading = ({ text, typeWriter, children }) => {
   if (!typeWriter) {
-    const displayedText = text.join(" ");
-    return <StyledHeading>{displayedText}</StyledHeading>;
+    return <StyledHeading>{children}</StyledHeading>;
   }
   return (
     <StyledHeading>
