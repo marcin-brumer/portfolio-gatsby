@@ -16,7 +16,8 @@ const StyledMain = styled.main`
   background: url(${background}) no-repeat center center;
   background-size: cover;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
   padding: 25vh 3rem 3rem 3rem;
   ::after {
     content: "";
