@@ -12,6 +12,10 @@ const StyledMain = styled.main`
   background: url(${background}) center center repeat;
   padding: 3rem;
   min-height: calc(100vh - 50px);
+
+  @media ${({ theme }) => theme.media.mobileL} {
+    padding: 1rem;
+  }
 `;
 
 const AboutPage = () => (
