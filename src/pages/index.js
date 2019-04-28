@@ -6,11 +6,12 @@ import LargeHeading from "../components/LargeHeading/LargeHeading";
 import SmallHeading from "../components/SmallHeading/SmallHeading";
 import SocialButton from "../components/UI/SocialButton/SocialButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faCodepen,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import background from "../img/background.jpg";
-
-library.add(fab);
 
 const StyledMain = styled.main`
   background: url(${background}) no-repeat center center;
@@ -62,13 +63,13 @@ const IndexPage = () => (
       <SmallHeading text={["Web Developer", "Programmer"]} typeWriter />
       <SocialSection>
         <SocialButton link="https://www.linkedin.com/in/marcin-brumer-21469b175/">
-          <FontAwesomeIcon icon={["fab", "linkedin"]} />
+          <FontAwesomeIcon icon={faLinkedin} />
         </SocialButton>
         <SocialButton link="https://github.com/marcin-brumer">
-          <FontAwesomeIcon icon={["fab", "github"]} />
+          <FontAwesomeIcon icon={faGithub} />
         </SocialButton>
         <SocialButton link="https://codepen.io/Brumek/">
-          <FontAwesomeIcon icon={["fab", "codepen"]} />
+          <FontAwesomeIcon icon={faCodepen} />
         </SocialButton>
       </SocialSection>
     </StyledMain>
