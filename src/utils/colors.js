@@ -4,4 +4,5 @@ export const colors = {
   primaryDarken: "#373737",
   footer: "#2b2b2b",
   secondary: "#eece1a",
+  secondaryDarken: "#c6ab0f",
 };
