@@ -39,7 +39,7 @@ const SmallHeading = ({ text, typeWriter, children }) => {
     const [first, second] = text;
     return (
       <StyledHeading>
-        <Typist startDelay="2000">
+        <Typist startDelay={2000}>
           {first}
           <Typist.Backspace count={first.length} delay={2000} />
           <Typist.Delay ms={2000} />
