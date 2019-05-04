@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import ReactTypingEffect from "react-typing-effect";
+import Typist from "react-typist";
+import "react-typist/dist/Typist.css";
 
 const StyledHeading = styled.h2`
   margin: 0 0 1.5rem 0;
@@ -34,12 +35,19 @@ const StyledHeading = styled.h2`
 const SmallHeading = ({ text, typeWriter, children }) => {
   if (!typeWriter) {
     return <StyledHeading>{children}</StyledHeading>;
+  } else {
+    const [first, second] = text;
+    return (
+      <StyledHeading>
+        <Typist startDelay="2000">
+          {first}
+          <Typist.Backspace count={first.length} delay={2000} />
+          <Typist.Delay ms={2000} />
+          {second}
+        </Typist>
+      </StyledHeading>
+    );
   }
-  return (
-    <StyledHeading>
-      <ReactTypingEffect text={text} eraseDelay={3000} />
-    </StyledHeading>
-  );
 };
 
 export default SmallHeading;

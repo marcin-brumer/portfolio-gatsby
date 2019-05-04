@@ -10,7 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.3.25",
+    "gatsby": "^2.4.2",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-manifest": "^2.0.27",
     "gatsby-plugin-offline": "^2.0.25",
@@ -24,7 +24,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-pose": "^4.0.8",
-    "react-typing-effect": "^2.0.2",
+    "react-typist": "^2.0.5",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
