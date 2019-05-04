@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { theme } from "../utils/theme";
 
@@ -20,8 +21,20 @@ const GlobalStyle = createGlobalStyle`
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
-      <GlobalStyle />
-      {children}
+      <Helmet
+        title={"Portfolio - Marcin Brumer"}
+        meta={[
+          { name: "description", content: "Portfolio - Marcin Brumer" },
+          {
+            name: "keywords",
+            content: "portfolio webdeveloper marcin brumer programmer",
+          },
+        ]}
+      />
+      <>
+        <GlobalStyle />
+        {children}
+      </>
     </>
   </ThemeProvider>
 );
