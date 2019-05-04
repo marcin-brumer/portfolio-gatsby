@@ -72,8 +72,13 @@ const StyledButton = styled.a`
   }
 `;
 
-const SocialButton = ({ children, link }) => (
-  <StyledButton href={link} target="_blank" rel="noopener noreferrer">
+const SocialButton = ({ children, link, label }) => (
+  <StyledButton
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={label}
+  >
     {children}
   </StyledButton>
 );

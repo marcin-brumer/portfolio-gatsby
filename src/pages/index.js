@@ -62,13 +62,19 @@ const IndexPage = () => (
       <LargeHeading>Marcin Brumer</LargeHeading>
       <SmallHeading text={["Web Developer", "Programmer"]} typeWriter />
       <SocialSection>
-        <SocialButton link="https://www.linkedin.com/in/marcin-brumer-21469b175/">
+        <SocialButton
+          link="https://www.linkedin.com/in/marcin-brumer-21469b175/"
+          label="My LinkedIn page"
+        >
           <FontAwesomeIcon icon={faLinkedin} />
         </SocialButton>
-        <SocialButton link="https://github.com/marcin-brumer">
+        <SocialButton
+          link="https://github.com/marcin-brumer"
+          label="My GitHub page"
+        >
           <FontAwesomeIcon icon={faGithub} />
         </SocialButton>
-        <SocialButton link="https://codepen.io/Brumek/">
+        <SocialButton link="https://codepen.io/Brumek/" label="My Codepen page">
           <FontAwesomeIcon icon={faCodepen} />
         </SocialButton>
       </SocialSection>
