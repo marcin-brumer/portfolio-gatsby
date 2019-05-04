@@ -8,7 +8,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     line-height: 1.5;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: ${({ theme }) => theme.colors.white}
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.primary};
   }
 
   *, *::before, *::after {
