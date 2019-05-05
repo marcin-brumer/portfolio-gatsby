@@ -15,7 +15,6 @@ const StyledHeading = styled.h1`
 
   @media ${({ theme }) => theme.media.mobileL} {
     font-size: 5rem;
-    margin: 3rem 0 1rem 0;
   }
 
   @media ${({ theme }) => theme.media.mobileS} {

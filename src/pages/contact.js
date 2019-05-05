@@ -14,7 +14,7 @@ const StyledMain = styled.main`
   min-height: calc(100vh - 50px);
 
   @media ${({ theme }) => theme.media.mobileL} {
-    padding: 1rem;
+    padding: 3rem 1rem 1rem 1rem;
   }
 `;
 
